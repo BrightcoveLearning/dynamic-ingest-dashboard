@@ -31,6 +31,8 @@
    di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
   ```
 
+- you must insure that the notification handler can write to `video-ids.js` on the server. For instance, you can SSH to the folder on the server and use `chmod 777 video-ids.js`
+
 ###Architecture###
 <p>Here is the high-level architecture of the app: </p>
 
