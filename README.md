@@ -35,26 +35,26 @@
 
 <h4>Notification handler</h4>
 
-<p>[View the code](./ingest-dashboard/callbacks-di.php)</p>
+<p>[View the code](https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/callbacks-di.php)</p>
 
 <h4>JavaScript file:</h4>
 
-<p>[View the code](./ingest-dashboard/video-ids.js)</p>
+<p>[View the code](https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/video-ids.js)</p>
 
 <h4>Dashboard</h4>
 
 <p>The dashboard include the JavaScript file, and uses additional JavaScript to fetch data from the CMS API and write the results into a table:</p>
 
-<p>[View the code](./ingest-dashboard/di-log.html)</p>
+<p>[View the code](https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/di-log.html)</p>
 
 <h4>Proxy</h4>
 
 <p>The proxy, also built in PHP, takes the CMS API requests from the dashboard, gets an access token, and makes the API request, returning the data to the dashboard. The proxy is needed because client-side calls to the CMS-API are not allowed, as this would require exposing your client credentials:</p>
 
-<p>[View the code](./ingest-dashboard/brightcove-learning-proxy.php)</p>
+<p>[View the code](https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/brightcove-learning-proxy.php)</p>
 
 <h4>Clear the log</h4>
 
 <p>This simple PHP app just restores the JavaScript file to its original state, clearing out the old video ids</p>
 
-<p>[View the code](./ingest-dashboard/clear-log.php)</p>
+<p>[View the code](https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/clear-log.php)</p>
