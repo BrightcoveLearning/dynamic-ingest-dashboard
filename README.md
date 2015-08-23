@@ -2,7 +2,22 @@
 
 <p>This section is a sample of using notifications to build a simple dashboard for the Brightcove Dynamic Ingest API. The handler parses notifications from the Dynamic Ingest API to identify processing complete notifications. It then adds the video id into an array in a JavaScript file. The dashboard itself is an HTML page that includes the array of processed video ids. It uses the ids to makes 2 requests to the [CMS API](//docs.brightcove.com/en/video-cloud/cms-api/getting-started/quick-start-cms.html) to get the video metadata and the array of sources (renditions). Whether renditions exist or not shows whether the ingest succeeded or failed. You can view working sample of the dashboard [here](//solutions.brightcove.com/bcls/di-api/di-log.html).</p>
 
-<p>     Here is the high-level architecture of the app: </p>
+<h3>Changes you must make to app!</h3>
+<p>You must make the following changes to the app files before it will work for your account:</p>
+
+1. in `/ingest-dashboard/brightcove-learning-proxy.php`: insert the appropriate client_id and client_secret values in lines 26 and 27:
+    $client_id     = "your_client_id_here";
+    $client_secret = "your_client_secret_here";
+2. in `/ingest-dashboard/di-log.html`: insert your Video Cloud account id in line 63:
+    var account_id = your_account_id_here,
+3. in your app to make Dynamic Ingest requests, include a `callbacks` array in the request body data, with the full URL to `callback-di.php` - for example:
+    {"master":{"url":"videoURL"},"profile":"ingest-profile-name","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}
+4. if you use the `di-tester.html` to test this app, you will need to enter your Video Cloud account id in line 135, and correct the path to `callbacks-di.php` in line 251:
+    account_id = your_account_id_here,
+    ...
+    di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
+
+<p>Here is the high-level architecture of the app: </p>
 
 <p>![ingest-dashboard-architecture](./assets/ingestion-dashboard-architecture.png)</p>
 
