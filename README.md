@@ -7,22 +7,22 @@
 
 1. in `/ingest-dashboard/brightcove-learning-proxy.php`: insert the appropriate client_id and client_secret values in lines 26 and 27:
 
-    $client_id     = "your_client_id_here";
-    $client_secret = "your_client_secret_here";
+        $client_id     = "your_client_id_here";
+        $client_secret = "your_client_secret_here";
 
 2. in `/ingest-dashboard/di-log.html`: insert your Video Cloud account id in line 63:
 
-    var account_id = your_account_id_here,
+        var account_id = your_account_id_here,
 
 3. in your app to make Dynamic Ingest requests, include a `callbacks` array in the request body data, with the full URL to `callback-di.php` - for example:
 
-    {"master":{"url":"videoURL"},"profile":"ingest-profile-name","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}
+        {"master":{"url":"videoURL"},"profile":"ingest-profile-name","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}
 
 4. if you use the `di-tester.html` to test this app, you will need to enter your Video Cloud account id in line 135, and correct the path to `callbacks-di.php` in line 251:
 
-    account_id = your_account_id_here,
-    ...
-    di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
+        account_id = your_account_id_here,
+        ...
+        di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
 
 <p>Here is the high-level architecture of the app: </p>
 
