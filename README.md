@@ -24,9 +24,11 @@
         ...
         di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
 
+<h3>Architecture</h3>
+
 <p>Here is the high-level architecture of the app: </p>
 
-<p>![ingest-dashboard-architecture](./assets/ingestion-dashboard-architecture.png)</p>
+<p><img src="./assets/ingestion-dashboard-architecture.png"></p>
 
 <h3>The app parts</h3>
 
