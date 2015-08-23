@@ -12,26 +12,26 @@
 
 <h4>Notification handler</h4>
 
-<p><script src="https://gist.github.com/846bf4f1b8d52b442121.js"></script></p>
+<p><a href="https://gist.github.com/846bf4f1b8d52b442121">View the code</a></p>
 
 <h4>JavaScript file:</h4>
 
-<p><script src="https://gist.github.com/c4b36c1f826762be75f9.js"></script></p>
+<p><a href="https://gist.github.com/c4b36c1f826762be75f9">View the code</a></p>
 
 <h4>Dashboard</h4>
 
 <p>The dashboard include the JavaScript file, and uses additional JavaScript to fetch data from the CMS API and write the results into a table:</p>
 
-<p><script src="https://gist.github.com/5f93d0f1fae7c4666867.js"></script></p>
+<p><a href="https://gist.github.com/5f93d0f1fae7c4666867">View the code</a></p>
 
 <h4>Proxy</h4>
 
 <p>The proxy, also built in PHP, takes the CMS API requests from the dashboard, gets an access token, and makes the API request, returning the data to the dashboard. The proxy is needed because client-side calls to the CMS-API are not allowed, as this would require exposing your client credentials:</p>
 
-<p><script src="https://gist.github.com/b0d5f05a328840851ce5.js"></script></p>
+<p><a href="https://gist.github.com/b0d5f05a328840851ce5">View the code</a></p>
 
 <h4>Clear the log</h4>
 
-<p>This simple PHP app just restores the JavaScript file to its original state, clearing out the old video ids:</p>
+<p>This simple PHP app just restores the JavaScript file to its original state, clearing out the old video ids</p>
 
-<p><script src="https://gist.github.com/d013a4d44236054a2201.js"></script></p
+<p><a href="https://gist.github.com/d013a4d44236054a2201">View the code</a></p>

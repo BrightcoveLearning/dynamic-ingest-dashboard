@@ -60,14 +60,14 @@
         var BCLS = ( function (videoIdArray) {
             // to use another account, set the account_id value appropriately
             // the client_id and client_secret will also need to be changed in the proxy
-            var account_id = 57838016001,
+            var account_id = your_account_id_here,
                 logBody = document.getElementById('logBody'),
                 loadingMessage = document.getElementById('loadingMessage'),
                 clearLogBtn = document.getElementById('clearLogBtn'),
                 i = 0,
                 iMax = videoIdArray.length,
                 // set the proxyURL to the location of the proxy app that makes Brightcove API requests
-                proxyURL = 'https://solutions.brightcove.com/bcls/di-api/brightcove-learning-proxy.php',
+                proxyURL = './brightcove-learning-proxy.php',
                 videoDataArray = [],
                 videoDataItem = {},
                 requestOptions = {},

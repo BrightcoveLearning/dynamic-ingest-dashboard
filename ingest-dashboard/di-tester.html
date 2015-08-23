@@ -92,7 +92,7 @@
                                 </p>
                                 <p>
                                     Full request URL for the API call:<br />
-                                    <textarea name="url" id="cms_url">https://cms.api.brightcove.com/v1/accounts/57838016001/videos</textarea>
+                                    <textarea name="url" id="cms_url">https://cms.api.brightcove.com/v1/accounts/' + account_id + '/videos</textarea>
                                 </p>
                                 <p>
                                     <input id="cms_Submit" type="submit" value="Submit">
@@ -109,7 +109,7 @@
                                 </p>
                                 <p>
                                     Full request URL for the API call:<br />
-                                    <textarea name="url" id="di_url">https://ingest.api.brightcove.com/v1/accounts/57838016001/videos/videoId/ingest-requests</textarea>
+                                    <textarea name="url" id="di_url">https://ingest.api.brightcove.com/v1/accounts/' + account_id + '/videos/videoId/ingest-requests</textarea>
                                 </p>
                             <pre><code id="di_response"></code></pre>
                         </fieldset>
@@ -132,6 +132,7 @@
     <script>
     var BCLS = ( function ($) {
         var // CMS API stuff
+            account_id = your_account_id_here,
             cms_requestBody = document.getElementById('cms_requestBody'),
             cms_url = document.getElementById('cms_url'),
             di_requestBody = document.getElementById('di_requestBody'),
@@ -140,7 +141,7 @@
             cms_submit = document.getElementById('cms_Submit'),
             cms_response = document.getElementById('cms_response'),
             di_response = document.getElementById('di_response'),
-            proxyURL = "http://solutions.brightcove.com/bcls/di-api/brightcove-learning-proxy.php",
+            proxyURL = "./brightcove-learning-proxy.php",
             videoSelector = document.getElementById('videoSelector'),
             profileSelector = document.getElementById('profileSelector'),
             selectedVideo,
@@ -218,7 +219,7 @@
                     switch (type) {
                         case 'cms':
                         cms_response.innerHTML = data;
-                        di_url.value = 'https://ingest.api.brightcove.com/v1/accounts/57838016001/videos/' + parsedData.id +'/ingest-requests';
+                        di_url.value = 'https://ingest.api.brightcove.com/v1/accounts/' + account_id + '/videos/' + parsedData.id +'/ingest-requests';
                         bclslog(di_url.value);
                         setDIOptions();
                         break;
@@ -246,7 +247,8 @@
 
         // set DI request data
         setDIData = function () {
-            di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://solutions.brightcove.com/bcls/di-api/callbacks-di.php","http://solutions.brightcove.com/bcls/di-api/di-callbacks.php"]}'
+            // note: you MUST change the path to callback handler!!!
+            di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}'
         };
 
         // get the videoname from the path, append timestamp
