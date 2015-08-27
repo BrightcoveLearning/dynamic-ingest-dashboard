@@ -59,6 +59,7 @@
         <div id="main" class="large-10 small-12 columns">
             <div id="top" class="section">
                 <h1>Dynamic Ingest tester</h1>
+                <h3>Account <span id="account"></span></h3>
                 <p>This app is used to test the Dynamic Ingest API <a href="./di-log.html">notifications callback app</a>.
                 </p>
                 <h3>The tester</h3>
@@ -134,6 +135,7 @@
         var // CMS API stuff
             account_id = your_account_id_here,
             callbackURL = '//path-to/callbacks-di.php',
+            account = document.getElementById('account'),
             cms_requestBody = document.getElementById('cms_requestBody'),
             cms_url = document.getElementById('cms_url'),
             di_requestBody = document.getElementById('di_requestBody'),
@@ -283,6 +285,7 @@
         selectedVideoURL = getSelectedValue(videoSelector);
         selectedVideo = getVideoName();
         bclslog('selectedVideo', selectedVideo);
+        account.innerHTML = account_id;
         setCMSData();
     })($);
     </script>
