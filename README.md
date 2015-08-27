@@ -27,7 +27,7 @@ The files must be deployed on a local or remote web server running PHP.
         {"master":{"url":"videoURL"},"profile":"ingest-profile-name","callbacks": ["http://path_to_this_folder/ingest-dashboard/callbacks-di.php"]}
   ```
 
-- if you use the `di-tester.html` to test this app, you will need to enter your Video Cloud account id in line 135, and correct the path to `callbacks-di.php` in line 251:
+- if you use the `di-tester.html` to test this app, you will need to enter your Video Cloud account id and the path to `callbacks-di.php` in lines 135-6:
 
   ```
         account_id = your_account_id_here,
