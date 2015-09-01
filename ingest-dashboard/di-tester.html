@@ -201,7 +201,7 @@
         // set options for the Dynamic Ingest API request
         setDIOptions = function () {
             var options = {};
-            options.requestBody = cleanString(di_requestBody.value);
+            options.requestBody = cleanString(di_requestBody.innerHTML);
             options.requestType = requestType;
             options.url = di_url.value;
             bclslog("di options", options);
@@ -224,6 +224,7 @@
                         cms_response.innerHTML = data;
                         di_url.value = 'https://ingest.api.brightcove.com/v1/accounts/' + account_id + '/videos/' + parsedData.id +'/ingest-requests';
                         bclslog(di_url.value);
+                        setDIData();
                         setDIOptions();
                         break;
                         case 'di':
@@ -251,7 +252,7 @@
         // set DI request data
         setDIData = function () {
             // note: you MUST change the path to callback handler!!!
-            di_requestBody.value = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": [' + callbackURL + ']}'
+            di_requestBody.innerHTML = '{"master":{"url":"' + selectedVideoURL + '"},"profile":"' + selectedProfile + '","callbacks": [' + callbackURL + ']}'
         };
 
         // get the videoname from the path, append timestamp
