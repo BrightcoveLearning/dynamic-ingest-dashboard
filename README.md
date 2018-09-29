@@ -12,8 +12,8 @@ All files in the **ingest-dashboard** folder must be deployed to one folder on a
 - in `/ingest-dashboard/brightcove-learning-proxy.php`: insert the appropriate client_id and client_secret values in lines 24 and 25:
 
   ```
-   $client_id     = "your_client_id_here";
-   $client_secret = "your_client_secret_here";
+  $default_client_id     = 'YOUR_CLIENT_ID_HERE';
+  $default_client_secret = 'YOUR_CLIENT_SECRET_HERE';
   ```
 
 - in `/ingest-dashboard/di-log.js`: insert your Video Cloud account id in line 63:
