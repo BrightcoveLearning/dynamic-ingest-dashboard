@@ -1,7 +1,7 @@
 var BCLS = ( function (videoIdArray) {
     // to use another account, set the account_id value appropriately
     // the client_id and client_secret will also need to be changed in the proxy
-    var account_id = '57838016001',
+    var account_id = '***YOUR_ACCOUNT_ID_HERE***',
         account = document.getElementById('account'),
         logBody = document.getElementById('logBody'),
         loadingMessage = document.getElementById('loadingMessage'),
