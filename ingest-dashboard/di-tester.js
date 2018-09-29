@@ -2,7 +2,7 @@ var BCLS = (function(window, document) {
   var account_id = '***YOUR_ACCOUNT_ID_HERE***',
     // **** You MUST change the path below to match the location
     // **** where you are hosting callbacks-di.php
-    callbackURL = 'https://solutions.brightcove.com/bcls/ingest-dashboard/callbacks-di.php',
+    callbackURL = 'https://***YOUR_PATH***/callbacks-di.php',
     account = document.getElementById('account'),
     cms_requestBody = document.getElementById('cms_requestBody'),
     cms_url = document.getElementById('cms_url'),
