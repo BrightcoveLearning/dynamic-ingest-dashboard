@@ -52,13 +52,15 @@ All files in the **ingest-dashboard** folder must be deployed to one folder on a
 <p><a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/callbacks-di.php">[View the code]</a></p>
 
 ### JavaScript file:
-<p>[View the code]<a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/video-ids.js">[View the code]</a></p>
+<p><a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/video-ids.js">[View the code]</a></p>
 
 ### Dashboard
 <p>The dashboard include the JavaScript file, and uses additional JavaScript to fetch data from the CMS API and write the results into a table:</p>
 
+#### HTML
 <p><a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/di-log.html">[View the code]</a></p>
 
+#### JavaScript
 <p><a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/di-log.js">[View the code]</a></p>
 
 ### Proxy
