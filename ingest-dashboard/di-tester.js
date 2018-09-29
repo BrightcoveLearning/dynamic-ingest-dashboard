@@ -1,6 +1,7 @@
 var BCLS = (function(window, document) {
-  var // CMS API stuff
-    account_id = '57838016001',
+  var account_id = '***YOUR_ACCOUNT_ID_HERE***',
+    // **** You MUST change the path below to match the location
+    // **** where you are hosting callbacks-di.php
     callbackURL = 'https://solutions.brightcove.com/bcls/ingest-dashboard/callbacks-di.php',
     account = document.getElementById('account'),
     cms_requestBody = document.getElementById('cms_requestBody'),
