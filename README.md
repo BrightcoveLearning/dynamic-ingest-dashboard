@@ -2,6 +2,8 @@
 
 <p>This is a sample of using notifications to build a simple dashboard for the Brightcove Dynamic Ingest API. The handler parses notifications from the Dynamic Ingest API to identify processing complete notifications. It then adds the video id into an array in a JavaScript file. The dashboard itself is an HTML page that includes the array of processed video ids. It uses the ids to makes 2 requests to the CMS API to get the video metadata and the array of sources. Whether renditions exist or not shows whether the ingest succeeded or failed. You can view working sample of the dashboard <a href="//solutions.brightcove.com/bcls/ingest-dashboard/di-log.html">here.</a>.</p>
 
+A tester is also included to make it easy to add some videos from our Learning Services video repository and test your dashboard.
+
 ## Requiremensts
 
 All files in the **ingest-dashboard** folder must be deployed to one folder on a local or remote web server running PHP.
