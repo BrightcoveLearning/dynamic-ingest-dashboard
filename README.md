@@ -70,3 +70,6 @@ All files in the **ingest-dashboard** folder must be deployed to one folder on a
 <p>This simple PHP app just restores the JavaScript file to its original state, clearing out the old video ids</p>
 
 <p><a href="https://github.com/BrightcoveLearning/dynamic-ingest-dashboard/blob/master/ingest-dashboard/clear-log.php">[View the code]</a></p>
+
+## Notes
+1. There are several `console.log` commands in the JavaScript files that I have left in place, as you may find them useful in debugging your own setup. You can delete or comment out these commands if you wish to.
