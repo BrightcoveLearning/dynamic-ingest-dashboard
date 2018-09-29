@@ -21,8 +21,8 @@
  header("X-XSS-Protection");
 
  // default account values
- $default_client_id     = '3e23bbec-59b8-4861-b5ba-7c26e110a746';
- $default_client_secret = 'quNdrH07IVoG8yZxSFsCySWmtvUuWfPYyzeg1Nil7Md7VpQ50A3KVV4eeMrZSR7FdeZA_3JS5jV9pBBI0skwWA';
+ $default_client_id     = 'YOUR_CLIENT_ID_HERE';
+ $default_client_secret = 'YOUR_CLIENT_SECRET_HERE';
 
  // get request body
  $requestData = json_decode(file_get_contents('php://input'));
